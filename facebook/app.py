@@ -39,6 +39,10 @@ def login():
             return 'Login failed'
     else:
         return render_template('index.html')
+@app.route('/register')
+def register():
+    return render_template('register.html')
+    
 
 @app.route('/insert', methods=['POST'])
 def insert_user():
