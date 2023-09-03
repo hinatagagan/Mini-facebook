@@ -1,20 +1,25 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Declaration of the HTML document type. -->
 <html>
 <head>
-    <title>Mini Facebook - Login</title>
+    <title>Mini Facebook - Login</title> <!-- Title of the web page shown in the browser tab. -->
+    <script src="index.js"></script>
 </head>
 <body>
-    <h2>Login</h2>
-    <form action="/" method="POST">
-        <label for="username">Username:</label>
+    <h2>Login</h2> <!-- Heading for the login section. -->
+    <form action="/" method="POST" onsubmit="return validateLoginForm();">
+        <!-- HTML form element with attributes specifying action, method, and form submission validation. -->
+        <label for="username">Username:</label> <!-- Label for the username input field. -->
         <input type="text" id="username" name="username" required><br><br>
+        <!-- Input field for entering the username. The 'required' attribute makes it mandatory. -->
 
-        <label for="password">Password:</label>
+        <label for="password">Password:</label> <!-- Label for the password input field. -->
         <input type="password" id="password" name="password" required><br><br>
+        <!-- Input field for entering the password. The 'required' attribute makes it mandatory. -->
 
-        <input type="submit" value="Login">
+        <input type="submit" value="Login"> <!-- Submit button for form submission. -->
     </form>
 
     <p>Don't have an account? <a href="/register">Register here</a></p>
+    <!-- Paragraph with a link to the registration page for users who don't have an account. -->
 </body>
 </html>

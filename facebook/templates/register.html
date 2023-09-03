@@ -1,18 +1,25 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- This declares the document type as HTML -->
 <html>
 <head>
-    <title>Mini Facebook - Register</title>
+    <title>Mini Facebook - Register</title> <!-- Sets the title of the web page -->
+    <script src="index.js"></script>
 </head>
 <body>
-    <h2>Register</h2>
-    <form action="/register" method="POST">
-        <label for="username">Username:</label>
+    <h2>Register</h2> <!-- Heading for the registration form -->
+    <form action="/register" method="POST" onsubmit="return validateRegistrationForm();">
+        <!-- The form element with an action to '/register' and a POST method -->
+        <label for="username">Username:</label> <!-- Label for the 'username' input field -->
         <input type="text" id="username" name="username" required><br><br>
+        <!-- Input field for entering a username with 'required' attribute -->
 
-        <label for="password">Password:</label>
+        <label for="password">Password:</label> <!-- Label for the 'password' input field -->
         <input type="password" id="password" name="password" required><br><br>
+        <!-- Input field for entering a password with 'required' attribute -->
 
-        <input type="submit" value="Register">
+        <input type="submit" value="Register"> <!-- Submit button for the form -->
     </form>
+
+    <p>Already have an account? <a href="/">Login here</a></p>
+    <!-- Text and a link for users who already have an account -->
 </body>
 </html>
